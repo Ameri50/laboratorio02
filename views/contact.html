@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <h1>Contáctenos</h1>
+    <p>Gracias por visitar nuestra página. Si tiene alguna consulta, inquietud o comentario, por favor complete el siguiente formulario y nos pondremos en contacto con usted lo antes posible.</p>
+
+    <form action="/submit-form" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+        <label for="telefono">Teléfono (opcional):</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono">
+
+        <label for="asunto">Asunto de la consulta:</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Escriba el asunto del mensaje" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje aquí" required></textarea>
+
+        <fieldset>
+            <legend>Seleccione un tema relacionado:</legend>
+            <label><input type="radio" name="tema" value="Soporte técnico" required> Soporte técnico</label>
+            <label><input type="radio" name="tema" value="Consultas generales" required> Consultas generales</label>
+            <label><input type="radio" name="tema" value="Sugerencias" required> Sugerencias</label>
+        </fieldset>
+
+        <label for="preferencia-contacto">¿Cómo prefieres que te contactemos?</label>
+        <select id="preferencia-contacto" name="preferencia-contacto" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Correo electrónico">Correo electrónico</option>
+            <option value="Teléfono">Teléfono</option>
+            <option value="WhatsApp">WhatsApp</option>
+        </select>
+
+        <div>
+            <label><input type="checkbox" name="newsletter" value="yes"> Quiero recibir noticias y promociones en mi correo.</label>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <footer>
+        <a href="/views/index.html">Volver a Inicio</a>
+        <p>&copy; 2025 - Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

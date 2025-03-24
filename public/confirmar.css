@@ -1,0 +1,91 @@
+/* styles.css */
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #0c0a0a;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Estilos del Encabezado */
+header {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Sección de confirmación */
+.confirmation-details {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.confirmation-details p {
+    margin-bottom: 1rem;
+}
+
+.explore-list {
+    list-style: none;
+    padding: 0;
+}
+
+.explore-list li {
+    margin: 1rem 0;
+}
+
+.explore-list a {
+    text-decoration: none;
+    color: #0a0a0c;
+    font-weight: bold;
+}
+
+.explore-list a:hover {
+    text-decoration: underline;
+}
+
+/* Botón "Volver a Inicio" */
+.btn-home {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #0c0c0e;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-home:hover {
+    background-color: #e1e2e9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}

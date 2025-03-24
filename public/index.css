@@ -1,0 +1,158 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/public/img/hero-image.jpg') center/cover no-repeat;
+    color: rgb(8, 6, 6);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sección de Fortalezas */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: #4e54c8;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección de Testimonios */
+.testimonials {
+    padding: 4rem 2rem;
+    background-color: #f0f4ff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #4e54c8;
+    margin-bottom: 2rem;
+}
+
+blockquote {
+    margin: 2rem auto;
+    max-width: 600px;
+    font-style: italic;
+    position: relative;
+}
+
+blockquote p {
+    font-size: 1.2rem;
+}
+
+blockquote footer {
+    margin-top: 1rem;
+    color: #f1e9e9;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: rgb(241, 236, 236);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
