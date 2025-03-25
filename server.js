@@ -7,6 +7,11 @@ const PORT = process.env.PORT || 3000;
 // Servir archivos estáticos desde "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Ruta para la página de inicio
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
 // Servir archivos HTML de "views" cuando se accede a una ruta sin "/views/"
 app.get('/:page', (req, res) => {
     const filePath = path.join(__dirname, 'views', `${req.params.page}.html`);
@@ -16,11 +21,6 @@ app.get('/:page', (req, res) => {
             res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
         }
     });
-});
-
-// Ruta para la página de inicio
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Iniciar servidor
