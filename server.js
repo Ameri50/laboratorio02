@@ -1,34 +1,29 @@
 const express = require('express');
 const path = require('path');
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware para archivos estáticos (CSS, imágenes, HTML)
+// Servir archivos estáticos desde "public"
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));  // Servir HTML directamente
 
-app.use(express.urlencoded({ extended: true }));
+// Servir archivos HTML de "views" cuando se accede a una ruta sin "/views/"
+app.get('/:page', (req, res) => {
+    const filePath = path.join(__dirname, 'views', `${req.params.page}.html`);
 
-// Ruta principal
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+        }
+    });
+});
+
+// Ruta para la página de inicio
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// Manejo del formulario
-app.post('/submit-form', (req, res) => {
-    const { nombre, mensaje } = req.body;
-
-    if (!nombre || !mensaje) {
-        return res.status(400).send('<h1>Error: Todos los campos son obligatorios</h1>');
-    }
-
-    console.log(`Nombre: ${nombre}`);
-    console.log(`Mensaje: ${mensaje}`);
-
-    res.redirect('/confirmacion.html');
-});
-
-// Iniciar el servidor
+// Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor en funcionamiento en http://localhost:${PORT}`);
+    console.log(`✅ Servidor funcionando en: http://localhost:${PORT}`);
 });
